@@ -1,0 +1,25 @@
+.container {
+  display: flex;
+  flex-direction: column;
+
+  gap: 2rem;
+
+  .box {
+    display: flex;
+    align-items: center;
+
+    padding: 1rem;
+    border: 1px solid #000;
+
+    gap: 1rem;
+
+    div {
+      display: flex;
+      justify-content: center;
+      margin: 0;
+      padding: 0;
+
+      gap: 0.2rem;
+    }
+  }
+}

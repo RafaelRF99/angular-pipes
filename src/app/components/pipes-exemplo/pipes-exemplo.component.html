@@ -1,0 +1,36 @@
+<div class="container">
+  <div class="box">
+    <label for="number">Número</label>
+    <input type="text" name="number" id="number" [(ngModel)]="number" />
+    {{ number | currency : "BRL" }}
+  </div>
+  <div class="box">
+    <h3>Letras Maiusculas</h3>
+    <p>{{ name | uppercase }}</p>
+  </div>
+  <div class="box">
+    <h3>Letras Minuscula</h3>
+    <p>{{ name | lowercase }}</p>
+  </div>
+  <div class="box">
+    <h3>Primeira letra Maiusculas</h3>
+    <p>{{ name | titlecase }}</p>
+  </div>
+  <div class="box">
+    <h3>Data</h3>
+    <p>{{ date | date : "dd/MM/YYYY" }}</p>
+  </div>
+  <div class="box">
+    <h3>Exibe JSON</h3>
+    <p>{{ pessoa | json }}</p>
+  </div>
+  <div class="box">
+    <input type="text" [(ngModel)]="arraySelected" />
+    <button (click)="enviar()">Enviar</button>
+    <div>
+      <p *ngFor="let value of array; let last = last">
+        {{ value }}{{ last ? " " : " - " }}
+      </p>
+    </div>
+  </div>
+</div>
